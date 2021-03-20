@@ -1,0 +1,42 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+<form action='' method="POST">
+    <div class="form-group">
+        <label>Available currency</label>
+        <select class="form-control" id="currency" name="one">
+          {%for x in AC%}
+          <option value={{x}}>{{x}}</option>
+          {%endfor%}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Currency exchange</label>
+        <select class="form-control" id="currency" name="two">
+            {%for x in AC%}
+            <option value="{{x}}">{{x}}</option>
+            {%endfor%}
+        </select>
+      </div>
+      <label>Amount to exchange</label>
+      <input type="number" class="form-control" id="count" name="value">
+      <br>
+      <center>
+      <input type="submit" value="submit" > 
+      </center>
+      <br> 
+</form>
+<br>
+<table class="table table-dark table-striped" id="myDIV" >
+  <h4 style="text-align: center;">Result</h4>
+   <tbody>
+    <tr class="table-active">
+      <td>{{tx1}} {{f1}} {{tx2}} {{ct}}</td>
+    </tr>
+    <tr class="table-active">
+      <td>{{tx3}} {{f1}} {{tx5}} {{sc}} {{tx4}} {{cf}}</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

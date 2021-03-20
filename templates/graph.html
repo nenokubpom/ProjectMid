@@ -1,0 +1,34 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+
+<form action='' method="POST">
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Select first currency</label>
+        <select class="form-control" id="currency" name="one">
+          {%for x in AC%}
+          <option value={{x}}>{{x}}</option>
+          {%endfor%}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Select second currency</label>
+        <select class="form-control" id="currency" name="two">
+            {%for x in AC%}
+            <option value="{{x}}">{{x}}</option>
+            {%endfor%}
+        </select>
+      </div>
+      <input type="submit" value="submit">
+</form>
+    <h1 style="color: coral;">{{description}}</h1>
+    <div id="div-id">
+        <script>
+            var graphs = {{ plot | safe}};
+            Plotly.plot('div-id', graphs, {});
+        </script>
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,43 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Value of money from descending</h1>
+        <img src="https://www.477internet.com/wp-content/uploads/2018/09/currency-1680786_640.png" alt="error" width="600" height="200">
+        <h2>{{base}}</h2>  
+     </div>
+     <form action='' method="POST">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Select your currency base</label>
+            <select class="form-control" id="currency" name="one">
+              {%for x in AC%}
+              <option value={{x}}>{{x}}</option>
+              {%endfor%}
+            </select>
+          </div>
+          <input type="submit" value="submit">
+    </form>
+    <br>
+    <table class="container">
+        <thead>
+        <tr>
+            <th>
+                Currency
+            </th>
+            <th>
+                Per 1 {{baseonly}}
+            </th>
+        </tr>
+    </thead>
+        {%for x,y in data1 %}
+        <tr>
+            <td>
+                {{x}}
+            </td>
+            <td>
+                {{y}}
+            </td>
+        </tr>
+        {%endfor%}
+     </table>
+{% endblock %}

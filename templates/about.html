@@ -1,0 +1,93 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+
+
+
+<div class="card" id="myDIV" style="display: block;">
+  <div class="image">
+    <img src="static/{{About[0].img}}" />
+  </div>
+  <div class="details">
+    <div class="center">
+      <h1>{{About[0].name}}<br><span>{{About[0].id}}</span></h1>
+      <p>{{About[0].description}}</p>
+    </div>
+  </div>
+</div>
+
+  <div class="card" id="myDIV1" style="display: none;">
+    <div class="image">
+      <img src="static/{{About[1].img}}" />
+    </div>
+    <div class="details">
+      <div class="center">
+        <h1>{{About[1].name}}<br><span>{{About[1].id}}</span></h1>
+        <p>{{About[1].description}}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="card" id="myDIV2" style="display: none;">
+    <div class="image">
+      <img src="static/{{About[2].img}}" />
+    </div>
+    <div class="details">
+      <div class="center">
+        <h1>{{About[2].name}}<br><span>{{About[2].id}}</span></h1>
+        <p>{{About[2].description}}</p>
+      </div>
+    </div>
+  </div>
+
+  <center>
+  <h4>คณะผู้จัดทำ</h4> <br/>
+
+  
+
+<div >
+<input type="button" name="position" onclick="myFunction()"  value="1" />
+<input type="button" name="position" onclick="myFunction1()" value="2"/>
+<input type="button" name="position" onclick="myFunction2()" value="3"/>
+</div>
+</center><br/><br/>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    var y = document.getElementById("myDIV1");
+    var z = document.getElementById("myDIV2");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.style.display = "none";
+      z.style.display = "none";
+    }
+  }
+
+  function myFunction1() {
+    var x = document.getElementById("myDIV");
+    var y = document.getElementById("myDIV1");
+    var z = document.getElementById("myDIV2");
+    if (y.style.display === "none") {
+      x.style.display = "none";
+      y.style.display = "block";
+      z.style.display = "none";
+    }
+  }
+
+  function myFunction2() {
+    var x = document.getElementById("myDIV");
+    var y = document.getElementById("myDIV1");
+    var z = document.getElementById("myDIV2");
+    if (z.style.display === "none") {
+      x.style.display = "none";
+      y.style.display = "none";
+      z.style.display = "block";
+    }
+  }
+</script>
+
+
+
+{% endblock %}

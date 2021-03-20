@@ -1,0 +1,23 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+<h1>NEWS</h1>
+
+
+
+{%for x in new%}
+<div style="background-color:rgb(241, 234, 234);">
+     <h3 style="color: rgb(248, 0, 0);">Title: <b>{{x['title']}}</b></h2>
+          <h3>Author: <b>{{x['author']}}</b></h3> <br>
+          <img src="{{x['image']}}" width="500px" height="300">
+          <h3>Description: <b>{{x['description']}}</b></h3>
+          <h3>Read More: <a href="{{x['url']}}">{{x['url']}}</a></h3> <br> <br> <br> <br>
+
+
+          {% endfor %}
+
+
+
+
+
+          {% endblock %}
