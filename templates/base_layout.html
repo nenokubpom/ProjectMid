@@ -6,45 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-   
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
- 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Bai+Jamjuree:ital,wght@1,700&family=Londrina+Solid:wght@100;400&display=swap">
-   
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
-    </script>
-    
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-   
+    <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
     </script>
-    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+
+
+
     <meta name="Author" content="https://github.com/pablorgarcia" />
     <meta name="description" content="Table Responsive" />
     <meta name="keywords" content="table, responsive" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/table-responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/table-responsive.css') }}">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style1.css') }}">
-    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style1.css') }}">
+
+
 
 
 </head>
 <style>
     body {
         font-family: 'Bai Jamjuree', sans-serif;
-        background: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/141881/141881_00_2x.jpg?20180321230528") no-repeat center center fixed;
-        
+        background: url("https://media.istockphoto.com/photos/flying-dollars-picture-id144274894?k=6&m=144274894&s=612x612&w=0&h=Q8jI7wYK9yne7W1FLwnqTyzVe-c6ZkYhEV_IdjWC2P0=") no-repeat center center fixed;
+
     }
+
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bai+Jamjuree:ital,wght@1,700&family=Londrina+Solid:wght@100;400&display=swap');
 
     html {
@@ -77,45 +69,44 @@
 
     }
 
-    .table td  {
-        text-align: center;
-    }
-    .table th  {
+    .table td {
         text-align: center;
     }
 
-    h4{
+    .table th {
+        text-align: center;
+    }
+
+    h4 {
         color: brown;
         font-size: 30px;
-       
+
     }
 
-    h1{
+    h1 {
         color: rgb(250, 0, 0);
     }
 
-    label{
+    label {
         color: rgba(0, 0, 0, 0.986);
     }
 
-    h3{
+    h3 {
         color: #000;
     }
-
-   
 </style>
 
 
 <body>
-   
+
     {% include 'includes/_navbar.html' %}
     <div class="container">
         {% block body %}{% endblock %}
     </div>
-   
-    
-    
-    
+
+
+
+
 </body>
 
 
